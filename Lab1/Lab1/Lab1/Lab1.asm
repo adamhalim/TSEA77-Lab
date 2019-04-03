@@ -7,8 +7,9 @@
 
 
 	.def	startBit = r20	; 1 bit siffra
-	ldi		r18,10		; Delay T, 5 för T/2
 	.def	counter = r21
+	ldi		r18,$0A			; Delay T, 5 för T/2
+	ldi		r20,$01
 	clr		r21
 	ldi		r16,HIGH(RAMEND)
 	out		SPH,r16
@@ -18,46 +19,47 @@
 
 
 	FOREVER:
-		call	hittaStartBit
-
+		clr		startBit
+		sbis	PINA,0
+		call	FOREVER
+		ldi		r18,5		; Delay = T/2
+		call	DELAY
+		sbis	PINA,0
+		call	FOREVER
+		dec		startBit
+		clr		r19			; Clearar output
 		
 	LOOP:
 		ldi		r18,10		; Delay = T
+		ldi		r23,$01
+		ldi		r22,$03
 		cpi		startBit,0	
 		breq	FOREVER
 		call	DELAY
-		ldi		r19,PINA	
-		andi	r19,$01		; Maskar ut sista biten
-		cpi		r19,$01		
-		breq	insertBit	; Kollar om input = 1 eller 0		
-		lsr		r19			; Om input = 0
+		ldi		r16,PINA	
+		andi	r16,$01		; Maskar ut sista biten
+		cpse	r16,r23
+		lsr		r19
+		call	insertBit	
 		cpi		counter,$03
-		breq	displayOutput	; Titta om 4 bitar har hittats
-		inc		counter		
+		breq	displayOutput
+		inc		counter
 		call	LOOP
+		
 		
 	displayOutput:
 		out		PORTB,r19
 		clr		counter
 		call	FOREVER
 
-
 	insertBit:
 		ldi		r16,$08
 		add		r19,r16
+		cpse	counter,r22	
 		lsr		r19			; Skifta 1 steg höger
-
-	hittaStartBit:
-		clr		startBit
-		sbic	PINA,0
-		dec		startBit	; Första biten = 1
-		call	FOREVER
-		ldi		r18,5		; Delay = T/2
-		call	DELAY
-		sbic	PINA,0
-		dec		startBit	; Om PINA = 1
-		clr		r19			; Clearar output
 		ret
+		
+		
 
 	INIT:
 		clr	r16

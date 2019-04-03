@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.57  \\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm Wed Apr 03 15:24:32 2019
+AVRASM ver. 2.1.57  \\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm Wed Apr 03 17:24:48 2019
 
 
 EQU  SIGNATURE_000 0000001e
@@ -605,12 +605,12 @@ EQU  OC0addr      00000026
 EQU  SPMRaddr     00000028
 EQU  INT_VECTORS_SIZE 0000002a
 DEF  startBit     r20
-CSEG INIT         0000002c
-CSEG FOREVER      00000007
-CSEG hittaStartBit 00000020
-CSEG LOOP         00000009
-CSEG DELAY        00000031
-CSEG insertBit    0000001d
-CSEG displayOutput 0000001a
-CSEG delayYttreLoop 00000033
-CSEG delayInreLoop 00000034
+DEF  counter      r21
+CSEG INIT         00000030
+CSEG FOREVER      00000009
+CSEG DELAY        00000035
+CSEG LOOP         00000015
+CSEG insertBit    0000002b
+CSEG displayOutput 00000027
+CSEG delayYttreLoop 00000037
+CSEG delayInreLoop 00000038

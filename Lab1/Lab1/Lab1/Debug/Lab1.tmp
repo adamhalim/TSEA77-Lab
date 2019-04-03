@@ -21,14 +21,13 @@
   <FILE>Lab1.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <INIT><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>62</LINE></INIT>
-  <FOREVER><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>19</LINE></FOREVER>
-  <hittaStartBit><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>50</LINE></hittaStartBit>
-  <LOOP><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>23</LINE></LOOP>
-  <DELAY><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>69</LINE></DELAY>
-  <insertBit><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>45</LINE></insertBit>
-  <displayOutput><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>40</LINE></displayOutput>
-  <delayYttreLoop><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>72</LINE></delayYttreLoop>
-  <delayInreLoop><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>74</LINE></delayInreLoop>
+  <INIT><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>64</LINE></INIT>
+  <FOREVER><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>21</LINE></FOREVER>
+  <DELAY><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>71</LINE></DELAY>
+  <LOOP><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>32</LINE></LOOP>
+  <insertBit><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>55</LINE></insertBit>
+  <displayOutput><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>50</LINE></displayOutput>
+  <delayYttreLoop><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>74</LINE></delayYttreLoop>
+  <delayInreLoop><FILE>\\ad.liu.se\home\adaab301\Desktop\Labbar\TSEA77-Lab\Lab1\Lab1\Lab1\Lab1.asm</FILE><LINE>76</LINE></delayInreLoop>
  </LABELS>
 </ASSEMBLER_INFO>
