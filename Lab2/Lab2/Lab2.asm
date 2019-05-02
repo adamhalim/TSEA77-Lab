@@ -34,7 +34,7 @@ LOOKUP:
             ldi ZH,HIGH(BTAB*2)
             ldi ZL,LOW(BTAB*2)
             subi char,$40
-			brmi	SPACE ;ändra till 40 med space sedan.
+			brmi	SPACE ;?ndra till 40 med space sedan.
 CONTINUE:	ldi r22, 1 
             add ZL,char
 			brcc pc+2
@@ -53,6 +53,7 @@ SEND:
             breq CHAR_DONE	
             rcall BEEP
             ldi beep_length,$01
+			ldi	N_length,$55
             rcall NO_BEEP
             rjmp SEND
 char_done:  ret
@@ -67,10 +68,10 @@ GET_BIT:
             ret
 						
 BEEP:
-			ldi	r22, $55
+			ldi	N_length,$55
 BEEPLOOP:
             rcall CYCLE1
-            dec r22
+            dec N_length
             brne BEEPLOOP
 			dec beep_length
 			brne BEEP
@@ -103,7 +104,7 @@ delayInreLoop:
             ret
            
 .org $200
-MESSAGE:    .db "AA BB CC",$00
+MESSAGE:    .db "AA BB CCC",$00
  
 .org $230
 BTAB:       .db $00, $60, $88, $A8, $90, $40, $28, $D0, $08, $20, $78, $B0, $48, $E0, $A0, $F0, $68, $D8, $50, $10, $C0, $30, $18, $70, $98, $B8, $C8
